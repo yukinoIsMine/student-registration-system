@@ -1,0 +1,16 @@
+node_modules
+.pnpm-store
+.next
+out
+dist
+.vercel
+.turbo
+coverage
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+student-registration-system-supabase-mvp.md
+student-registration-system-supabase-setup-guide.md
