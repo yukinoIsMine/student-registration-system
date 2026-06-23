@@ -9,7 +9,7 @@ export default function FaqPage() {
     <div className="page-shell max-w-3xl space-y-5">
       <h1 className="text-3xl font-bold">FAQ</h1>
       {faqs.map(([question, answer]) => (
-        <section key={question} className="rounded-lg border p-4">
+        <section key={question} className="glass-tile rounded-2xl p-4">
           <h2 className="font-semibold">{question}</h2>
           <p className="mt-2 text-sm text-muted-foreground">{answer}</p>
         </section>

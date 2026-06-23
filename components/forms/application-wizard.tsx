@@ -146,8 +146,10 @@ export function ApplicationWizard({
               key={label}
               type="button"
               onClick={() => setStep(index)}
-              className={`rounded-md border px-3 py-2 text-sm ${
-                step === index ? "border-primary bg-accent text-accent-foreground" : "text-muted-foreground"
+              className={`rounded-full border px-3 py-2 text-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] backdrop-blur-xl transition ${
+                step === index
+                  ? "border-sky-300 bg-white/80 text-primary"
+                  : "border-sky-200/80 bg-white/40 text-muted-foreground hover:bg-white/65 hover:text-primary"
               }`}
             >
               {label}
@@ -156,11 +158,11 @@ export function ApplicationWizard({
         </div>
 
         {message ? (
-          <p className="rounded-md border bg-muted p-3 text-sm text-muted-foreground">{message}</p>
+          <p className="glass-tile rounded-2xl p-3 text-sm text-muted-foreground">{message}</p>
         ) : null}
 
         {isLocked ? (
-          <p className="rounded-md border p-3 text-sm text-muted-foreground">
+          <p className="glass-tile rounded-2xl p-3 text-sm text-muted-foreground">
             This application has already been submitted and can no longer be edited.
           </p>
         ) : null}
@@ -177,7 +179,7 @@ export function ApplicationWizard({
               <Field label="Gender" error={form.formState.errors.gender?.message}>
                 <select
                   disabled={isLocked}
-                  className="h-10 w-full rounded-md border bg-background px-3 text-sm"
+                  className="h-10 w-full rounded-xl border border-sky-200/80 bg-white/55 px-3 text-sm outline-none shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-xl transition-all focus-visible:border-sky-300 focus-visible:bg-white/75 focus-visible:ring-2 focus-visible:ring-ring/50"
                   {...form.register("gender")}
                 >
                   <option value="">Select gender</option>
@@ -214,7 +216,7 @@ export function ApplicationWizard({
               <Field label="Program" error={form.formState.errors.program_id?.message}>
                 <select
                   disabled={isLocked}
-                  className="h-10 w-full rounded-md border bg-background px-3 text-sm"
+                  className="h-10 w-full rounded-xl border border-sky-200/80 bg-white/55 px-3 text-sm outline-none shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-xl transition-all focus-visible:border-sky-300 focus-visible:bg-white/75 focus-visible:ring-2 focus-visible:ring-ring/50"
                   {...form.register("program_id")}
                 >
                   <option value="">Select program</option>
@@ -237,7 +239,7 @@ export function ApplicationWizard({
           ) : null}
 
           {step === 4 ? (
-            <div className="space-y-3 rounded-lg border p-4 text-sm">
+            <div className="glass-tile space-y-3 rounded-2xl p-4 text-sm">
               <p>
                 Admission period: <strong>{admissionPeriod?.name ?? "Not available"}</strong>
               </p>

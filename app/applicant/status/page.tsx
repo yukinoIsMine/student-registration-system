@@ -65,7 +65,7 @@ export default async function ApplicantStatusPage() {
           </CardContent>
         </Card>
       ) : (
-        <div className="rounded-lg border p-6">
+        <div className="glass-panel rounded-2xl p-6">
           <p className="mb-4 text-muted-foreground">No application has been started.</p>
           <Button asChild>
             <Link href="/applicant/application">Start application</Link>

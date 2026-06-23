@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --background: 204 100% 98%;
+    --foreground: 212 58% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --primary: 173 70% 28%;
+    --card-foreground: 212 58% 15%;
+    --primary: 201 100% 43%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 38 65% 93%;
-    --secondary-foreground: 31 45% 20%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --accent: 210 100% 96%;
-    --accent-foreground: 215 68% 26%;
+    --secondary: 199 100% 92%;
+    --secondary-foreground: 205 76% 25%;
+    --muted: 204 100% 96%;
+    --muted-foreground: 207 32% 42%;
+    --accent: 195 100% 90%;
+    --accent-foreground: 203 91% 28%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 173 70% 28%;
-    --radius: 0.5rem;
+    --border: 199 85% 82%;
+    --input: 199 85% 82%;
+    --ring: 199 100% 50%;
+    --radius: 1rem;
   }
 
   * {
@@ -29,12 +29,69 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    min-height: 100vh;
+    font-family: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    @apply flex flex-col bg-background text-foreground antialiased;
+    background-color: hsl(var(--background));
+    background-image:
+      linear-gradient(rgba(14, 165, 233, 0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14, 165, 233, 0.09) 1px, transparent 1px),
+      linear-gradient(115deg, rgba(255, 255, 255, 0.96) 0%, rgba(226, 248, 255, 0.88) 42%, rgba(255, 255, 255, 0.95) 72%);
+    background-position:
+      center top,
+      center top,
+      center;
+    background-size:
+      38px 38px,
+      38px 38px,
+      cover;
+  }
+
+  body::before {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    content: "";
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.72) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.72) 1px, transparent 1px);
+    background-position:
+      center top,
+      center top;
+    background-size:
+      152px 152px,
+      152px 152px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.28));
+  }
+
+  ::selection {
+    background: rgba(14, 165, 233, 0.22);
+  }
+
+  input,
+  textarea,
+  select {
+    color-scheme: light;
   }
 }
 
 @layer utilities {
   .page-shell {
-    @apply container py-8 md:py-10;
+    @apply container py-8 md:py-12;
+  }
+
+  .glass-panel {
+    @apply border border-white/70 bg-white/60 shadow-[0_18px_60px_rgba(14,116,144,0.14)] backdrop-blur-2xl;
+  }
+
+  .glass-tile {
+    @apply border border-white/75 bg-white/55 shadow-[0_12px_36px_rgba(14,116,144,0.1)] backdrop-blur-xl;
+  }
+
+  .soft-glow {
+    box-shadow:
+      0 18px 45px rgba(14, 165, 233, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.56);
   }
 }

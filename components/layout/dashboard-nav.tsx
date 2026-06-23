@@ -14,7 +14,7 @@ export function DashboardNav({ items, className }: DashboardNavProps) {
         <Link
           key={item.href}
           href={item.href}
-          className="rounded-md border px-3 py-2 text-sm text-muted-foreground transition hover:bg-accent hover:text-accent-foreground"
+          className="rounded-full border border-sky-200/80 bg-white/45 px-3 py-2 text-sm text-muted-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] backdrop-blur-xl transition hover:bg-white/75 hover:text-primary"
         >
           {item.label}
         </Link>

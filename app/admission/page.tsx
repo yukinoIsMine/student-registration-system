@@ -20,7 +20,7 @@ export default function AdmissionPage() {
       </div>
       <ol className="grid gap-3 md:grid-cols-2">
         {steps.map((step) => (
-          <li key={step} className="flex gap-3 rounded-lg border p-4">
+          <li key={step} className="glass-tile flex gap-3 rounded-2xl p-4">
             <CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" aria-hidden="true" />
             <span>{step}</span>
           </li>

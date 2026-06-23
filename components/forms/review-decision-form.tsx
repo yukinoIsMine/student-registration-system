@@ -35,7 +35,7 @@ export function ReviewDecisionForm({ applicationId }: { applicationId: string })
   }
 
   return (
-    <div className="space-y-4 rounded-lg border p-4">
+    <div className="glass-tile space-y-4 rounded-2xl p-4">
       {message ? <p className="text-sm text-destructive">{message}</p> : null}
       <div className="space-y-2">
         <Label htmlFor="review_note">Review note</Label>
