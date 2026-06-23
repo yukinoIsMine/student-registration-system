@@ -22,7 +22,7 @@ export default async function RegisterPage({
         </CardHeader>
         <CardContent>
           {message ? (
-            <p className="mb-4 rounded-md border bg-muted p-3 text-sm text-muted-foreground">
+            <p className="glass-tile mb-4 rounded-2xl p-3 text-sm text-muted-foreground">
               {message}
             </p>
           ) : null}

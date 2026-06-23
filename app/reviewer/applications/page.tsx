@@ -64,12 +64,12 @@ export default async function ReviewerApplicationsPage() {
         </TableBody>
       </Table>
       {error ? (
-        <p className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 text-sm text-destructive">
+        <p className="rounded-2xl border border-destructive/30 bg-red-50/70 p-4 text-sm text-destructive shadow-[0_12px_36px_rgba(220,38,38,0.08)] backdrop-blur-xl">
           Supabase error: {error.message}
         </p>
       ) : null}
       {!applications?.length ? (
-        <p className="rounded-lg border p-4 text-sm text-muted-foreground">
+        <p className="glass-tile rounded-2xl p-4 text-sm text-muted-foreground">
           No submitted applications yet.
         </p>
       ) : null}

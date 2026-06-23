@@ -59,7 +59,11 @@ export default async function AdminProgramsPage() {
             <form action={createProgramAction} className="grid gap-4">
               <div className="space-y-2">
                 <Label htmlFor="department_id">Department</Label>
-                <select id="department_id" name="department_id" className="h-10 w-full rounded-md border bg-background px-3 text-sm">
+                <select
+                  id="department_id"
+                  name="department_id"
+                  className="h-10 w-full rounded-xl border border-sky-200/80 bg-white/55 px-3 text-sm outline-none shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-xl transition-all focus-visible:border-sky-300 focus-visible:bg-white/75 focus-visible:ring-2 focus-visible:ring-ring/50"
+                >
                   <option value="">No department</option>
                   {(departments ?? []).map((department) => (
                     <option key={department.id} value={department.id}>

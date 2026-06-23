@@ -23,15 +23,17 @@ export async function SiteHeader() {
         : "/applicant/dashboard";
 
   return (
-    <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-white/70 bg-white/58 shadow-[0_12px_40px_rgba(14,116,144,0.09)] backdrop-blur-2xl">
       <div className="container flex min-h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 font-semibold">
-          <GraduationCap className="h-6 w-6 text-primary" aria-hidden="true" />
+        <Link href="/" className="flex items-center gap-2 font-semibold text-foreground">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/80 bg-white/60 text-primary shadow-[0_10px_28px_rgba(14,165,233,0.15)] backdrop-blur-xl">
+            <GraduationCap className="h-5 w-5" aria-hidden="true" />
+          </span>
           <span>Student Registration</span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm text-muted-foreground md:flex">
           {publicLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-foreground">
+            <Link key={link.href} href={link.href} className="transition hover:text-primary">
               {link.label}
             </Link>
           ))}

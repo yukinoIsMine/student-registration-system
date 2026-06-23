@@ -91,12 +91,12 @@ export function DocumentUploader({
         </CardHeader>
         <CardContent>
           {message ? (
-            <p className="mb-4 rounded-md border bg-muted p-3 text-sm text-muted-foreground">
+            <p className="glass-tile mb-4 rounded-2xl p-3 text-sm text-muted-foreground">
               {message}
             </p>
           ) : null}
           {isLocked ? (
-            <p className="rounded-md border p-3 text-sm text-muted-foreground">
+            <p className="glass-tile rounded-2xl p-3 text-sm text-muted-foreground">
               Documents cannot be changed after submission.
             </p>
           ) : (
@@ -106,7 +106,7 @@ export function DocumentUploader({
                 <select
                   id="document_type"
                   name="document_type"
-                  className="h-10 w-full rounded-md border bg-background px-3 text-sm"
+                  className="h-10 w-full rounded-xl border border-sky-200/80 bg-white/55 px-3 text-sm outline-none shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-xl transition-all focus-visible:border-sky-300 focus-visible:bg-white/75 focus-visible:ring-2 focus-visible:ring-ring/50"
                   required
                 >
                   {requiredDocumentTypes.map((type) => (
@@ -134,7 +134,7 @@ export function DocumentUploader({
         <CardContent>
           <div className="space-y-3">
             {items.map((document) => (
-              <div key={document.id} className="rounded-md border p-3 text-sm">
+              <div key={document.id} className="glass-tile rounded-2xl p-3 text-sm">
                 <p className="font-medium">{document.file_name}</p>
                 <p className="capitalize text-muted-foreground">
                   {document.document_type.replaceAll("_", " ")}

@@ -18,15 +18,15 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <SiteHeader />
-        <main>{children}</main>
-        <footer className="border-t">
+        <main className="flex-1">{children}</main>
+        <footer className="border-t border-white/70 bg-white/45 backdrop-blur-xl">
           <div className="container flex flex-col gap-3 py-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
             <p>Student Registration System MVP</p>
             <div className="flex gap-4">
-              <Link href="/admission" className="hover:text-foreground">
+              <Link href="/admission" className="transition hover:text-primary">
                 Admission
               </Link>
-              <Link href="/contact" className="hover:text-foreground">
+              <Link href="/contact" className="transition hover:text-primary">
                 Contact
               </Link>
             </div>

@@ -46,7 +46,7 @@ export default async function ApplicantDocumentsPage() {
       {application ? (
         <DocumentUploader application={application} documents={documents ?? []} />
       ) : (
-        <div className="rounded-lg border p-6">
+        <div className="glass-panel rounded-2xl p-6">
           <p className="mb-4 text-muted-foreground">Create and save an application draft first.</p>
           <Button asChild>
             <Link href="/applicant/application">Create draft</Link>

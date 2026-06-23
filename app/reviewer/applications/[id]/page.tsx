@@ -80,7 +80,7 @@ export default async function ReviewerApplicationDetailPage({
           </CardHeader>
           <CardContent className="space-y-3">
             {(documents ?? []).map((document) => (
-              <div key={document.id} className="flex items-center justify-between gap-3 rounded-md border p-3 text-sm">
+              <div key={document.id} className="glass-tile flex items-center justify-between gap-3 rounded-2xl p-3 text-sm">
                 <div>
                   <p className="font-medium">{document.file_name}</p>
                   <p className="capitalize text-muted-foreground">{document.document_type.replaceAll("_", " ")}</p>

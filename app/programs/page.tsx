@@ -39,7 +39,7 @@ export default async function ProgramsPage() {
         ))}
       </div>
       {!programs?.length ? (
-        <p className="rounded-lg border p-4 text-sm text-muted-foreground">
+        <p className="glass-tile rounded-2xl p-4 text-sm text-muted-foreground">
           No active programs are available yet. Run the seed SQL after creating the schema.
         </p>
       ) : null}
